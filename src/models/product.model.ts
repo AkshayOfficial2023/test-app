@@ -13,9 +13,7 @@ export class Product extends Entity {
   @property({
     type: 'number',
     postgresql: {
-      dataType: 'real',
-      precision: 2,
-      scale: 1
+      dataType: 'int',
     }
   })
   price: number
