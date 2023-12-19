@@ -9,7 +9,6 @@ export class Product extends Entity {
   })
   id: string
 
-
   @property({
     type: 'number',
     postgresql: {
