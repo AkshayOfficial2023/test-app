@@ -16,13 +16,10 @@ export class ProductController {
   async post(
     @requestBody() product: Product
   ) {
-    const PRODUCT = new Product();
-    PRODUCT.price = product.price
+    const PRODUCT = new Product()
     PRODUCT.id = product.id
-    this.productRepo.create(PRODUCT).then(data => {
-      console.log(data);
-
-      return 'Success'
-    })
+    PRODUCT.price = product.price
+    const p = await this.productRepo.create(PRODUCT)
+    return p
   }
 }
